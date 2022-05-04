@@ -58,6 +58,7 @@ public class Runner extends Visual{
         background(0);
 
 
+
         switch(mode){
             case 1: //stars visual
             {
