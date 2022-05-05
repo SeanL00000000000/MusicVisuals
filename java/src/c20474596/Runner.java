@@ -16,15 +16,12 @@ public class Runner extends Visual{
     int mode = 0;
     float smoothedBoxSize = 0;
     float angle = 0;
-    //sean edits
     int c = 16;
     float t = 1;
     int nprime = 1;
     float hue;
     FFT fft; // Object that performs Fast Fourier Transform (FFT)
     int OFF_MAX= 300;
-    drop d;
-    drop[] drops= new drop[500];
     float radius = 200;
     float rot = 0;
 
@@ -38,11 +35,7 @@ public class Runner extends Visual{
         loadAudio("rain.mp3");
         colorMode(HSB,255);   
         hue = random(255);
-        //sean edits
         noStroke();
-        for(int i =0;i<drops.length; i++){
-            drops[i]= new drop();
-        }
     }
 
     public void keyPressed(){
@@ -188,7 +181,7 @@ public class Runner extends Visual{
             
     }
 
-    int colorFromOffset(int offset) {
+    int colorFromOffset(int offset) { //Add colour for small cubes within case 4 visual
         return (int) ((offset + OFF_MAX) / (2.0 * OFF_MAX) * 255);}
 }
  
